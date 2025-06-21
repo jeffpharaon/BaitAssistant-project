@@ -1,0 +1,71 @@
+D:\VsCodeProjects\Diplom\Программное обеспечение\BaitAssistant\BaitAssistant\obj\Debug\BaitAssistant.csproj.AssemblyReference.cache
+D:\VsCodeProjects\Diplom\Программное обеспечение\BaitAssistant\BaitAssistant\obj\Debug\App.g.cs
+D:\VsCodeProjects\Diplom\Программное обеспечение\BaitAssistant\BaitAssistant\obj\Debug\BaitAssistant_MarkupCompile.cache
+D:\VsCodeProjects\Diplom\Программное обеспечение\BaitAssistant\BaitAssistant\bin\Debug\BaitAssistant.exe.config
+D:\VsCodeProjects\Diplom\Программное обеспечение\BaitAssistant\BaitAssistant\bin\Debug\BaitAssistant.exe
+D:\VsCodeProjects\Diplom\Программное обеспечение\BaitAssistant\BaitAssistant\bin\Debug\BaitAssistant.pdb
+D:\VsCodeProjects\Diplom\Программное обеспечение\BaitAssistant\BaitAssistant\obj\Debug\MainWindow.baml
+D:\VsCodeProjects\Diplom\Программное обеспечение\BaitAssistant\BaitAssistant\obj\Debug\MainWindow.g.cs
+D:\VsCodeProjects\Diplom\Программное обеспечение\BaitAssistant\BaitAssistant\obj\Debug\BaitAssistant.g.resources
+D:\VsCodeProjects\Diplom\Программное обеспечение\BaitAssistant\BaitAssistant\obj\Debug\BaitAssistant.Properties.Resources.resources
+D:\VsCodeProjects\Diplom\Программное обеспечение\BaitAssistant\BaitAssistant\obj\Debug\BaitAssistant.csproj.GenerateResource.cache
+D:\VsCodeProjects\Diplom\Программное обеспечение\BaitAssistant\BaitAssistant\obj\Debug\BaitAssistant.csproj.CoreCompileInputs.cache
+D:\VsCodeProjects\Diplom\Программное обеспечение\BaitAssistant\BaitAssistant\obj\Debug\BaitAssistant.exe
+D:\VsCodeProjects\Diplom\Программное обеспечение\BaitAssistant\BaitAssistant\obj\Debug\BaitAssistant.pdb
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\BaitAssistant.exe.config
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\BaitAssistant.exe
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\BaitAssistant.pdb
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\System.Buffers.dll
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\System.IO.Pipelines.dll
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\System.Memory.dll
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\System.Numerics.Vectors.dll
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\System.Text.Encodings.Web.dll
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\System.Text.Json.dll
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\System.ValueTuple.dll
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\System.Buffers.xml
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\System.IO.Pipelines.xml
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\System.Memory.xml
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\System.Numerics.Vectors.xml
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\System.Text.Encodings.Web.xml
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\System.Text.Json.xml
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\System.ValueTuple.xml
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\obj\Debug\BaitAssistant.csproj.AssemblyReference.cache
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\obj\Debug\MainWindow.baml
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\obj\Debug\MainWindow.g.cs
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\obj\Debug\App.g.cs
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\obj\Debug\BaitAssistant_MarkupCompile.cache
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\obj\Debug\BaitAssistant.g.resources
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\obj\Debug\BaitAssistant.Properties.Resources.resources
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\obj\Debug\BaitAssistant.csproj.GenerateResource.cache
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\obj\Debug\BaitAssistant.csproj.CoreCompileInputs.cache
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\obj\Debug\BaitAssi.E8A8F1C1.Up2Date
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\obj\Debug\BaitAssistant.exe
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\obj\Debug\BaitAssistant.pdb
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\Microsoft.Win32.Registry.dll
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\NAudio.Asio.dll
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\NAudio.Core.dll
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\NAudio.dll
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\NAudio.Midi.dll
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\NAudio.Wasapi.dll
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\NAudio.WinForms.dll
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\NAudio.WinMM.dll
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\System.Security.AccessControl.dll
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\System.Security.Principal.Windows.dll
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\websocket-sharp.dll
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\Microsoft.Win32.Registry.xml
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\NAudio.xml
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\NAudio.Asio.xml
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\NAudio.Core.xml
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\NAudio.Midi.xml
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\NAudio.Wasapi.xml
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\NAudio.WinForms.xml
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\NAudio.WinMM.xml
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\System.Security.AccessControl.xml
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\System.Security.Principal.Windows.xml
+D:\VsCodeProjects\Diplom\Program\BaitAssistant\BaitAssistant\bin\Debug\websocket-sharp.xml

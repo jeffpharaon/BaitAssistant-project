@@ -1,0 +1,250 @@
+﻿<!-- MainWindow.xaml -->
+<Window x:Class="BaitAssistant.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Байт" Height="600" Width="900"
+        Background="#111217"
+        FontFamily="Consolas"
+        WindowStartupLocation="CenterScreen">
+
+    <!-- Resources: brushes, styles, animation -->
+    <Window.Resources>
+        <!-- Colors -->
+        <SolidColorBrush x:Key="BackgroundBrush" Color="#111217"/>
+        <SolidColorBrush x:Key="PanelBrush" Color="#1E1E28"/>
+        <SolidColorBrush x:Key="CardBrush" Color="#1A1A24"/>
+        <SolidColorBrush x:Key="AccentBrush" Color="#FF5C5C"/>
+        <SolidColorBrush x:Key="SecondaryBrush" Color="#4FD8C7"/>
+        <SolidColorBrush x:Key="TextLight" Color="#DDDDDD"/>
+
+        <!-- Icon button style (circular) -->
+        <Style x:Key="IconButton" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource CardBrush}"/>
+            <Setter Property="Foreground" Value="{StaticResource AccentBrush}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Width" Value="60"/>
+            <Setter Property="Height" Value="60"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Ellipse Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Flat button style for Send/Text & Settings close -->
+        <Style x:Key="FlatButton" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource PanelBrush}"/>
+            <Setter Property="Foreground" Value="{StaticResource AccentBrush}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource AccentBrush}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="8,4"/>
+            <Setter Property="FontFamily" Value="Consolas"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="4">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Mic pulsing animation -->
+        <Storyboard x:Key="MicPulse">
+            <DoubleAnimation Storyboard.TargetName="MicButton"
+                             Storyboard.TargetProperty="Opacity"
+                             From="1.0" To="0.5"
+                             Duration="0:0:0.5"
+                             AutoReverse="True"
+                             RepeatBehavior="Forever"/>
+        </Storyboard>
+    </Window.Resources>
+
+    <Grid>
+        <!-- Two columns: history and main -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- History panel -->
+        <Grid Grid.Column="0" Background="{StaticResource PanelBrush}">
+            <TextBlock Text="История"
+                       Foreground="{StaticResource AccentBrush}"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       Margin="16"/>
+            <ItemsControl x:Name="HistoryList"
+                          Margin="16,64,16,16">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Background="{StaticResource CardBrush}"
+                                CornerRadius="6"
+                                Padding="8"
+                                Margin="0,4">
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle Width="24" Height="24"
+                                           Fill="#2A2A33"
+                                           RadiusX="4" RadiusY="4"/>
+                                <TextBlock Text="{Binding}"
+                                           Foreground="{StaticResource TextLight}"
+                                           VerticalAlignment="Center"
+                                           Margin="8,0,0,0"/>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Grid>
+
+        <!-- Main panel -->
+        <Grid Grid.Column="1" Background="{StaticResource BackgroundBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <!-- Header -->
+                <RowDefinition Height="Auto"/>
+                <!-- Text input -->
+                <RowDefinition Height="*"/>
+                <!-- Content / mic -->
+            </Grid.RowDefinitions>
+
+            <!-- Header: statuses + settings button -->
+            <Grid Margin="16">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" Grid.Column="0">
+                    <TextBlock x:Name="ListenLb" Text="Слушаю..."
+                               Foreground="{StaticResource AccentBrush}"
+                               FontSize="18"
+                               Margin="0,0,16,0"/>
+                    <TextBlock x:Name="ProcessingLb" Text="Обрабатываю..."
+                               Foreground="{StaticResource SecondaryBrush}"
+                               FontSize="18"
+                               Margin="0,0,16,0"/>
+                    <TextBlock x:Name="ResultLb" Text="Выполнено"
+                               Foreground="{StaticResource SecondaryBrush}"
+                               FontSize="18"/>
+                </StackPanel>
+                <Rectangle Grid.Column="1" Fill="Transparent"/>
+                <Button x:Name="SettingsButton"
+                        Grid.Column="2"
+                        Style="{StaticResource IconButton}"
+                        Click="SettingsButton_Click">
+                    <Path Data="M12,8a4,4 0 1,1 0,8a4,4 0 0,1 0,-8m8,4a1,1 0 0,1 -1,1h-1.07a5.98,5.98 0 0,1 -1.2,2.29l.76,.76a1,1 0 1,1 -1.42,1.42l-.76,-.76a5.98,5.98 0 0,1 -2.29,1.2V19a1,1 0 1,1 -2,0v-1.07a5.98,5.98 0 0,1 -2.29,-1.2l-.76,.76a1,1 0 1,1 -1.42,-1.42l.76,-.76a5.98,5.98 0 0,1 1.2,-2.29H5a1,1 0 1,1 0,-2h1.07a5.98,5.98 0 0,1 1.2,-2.29l-.76,-.76a1,1 0 1,1 1.42,-1.42l.76,.76a5.98,5.98 0 0,1 2.29,-1.2V5a1,1 0 1,1 2,0v1.07a5.98,5.98 0 0,1 2.29,1.2l.76,-.76a1,1 0 1,1 1.42,1.42l-.76,.76a5.98,5.98 0 0,1 1.2,2.29H19a1,1 0 0,1 1,1Z"
+                          Fill="{StaticResource AccentBrush}"
+                          Stretch="Uniform"
+                          Width="24" Height="24"/>
+                </Button>
+            </Grid>
+
+            <!-- Text input row -->
+            <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="32,8">
+                <TextBox x:Name="TextCommandBox"
+                         Width="400" Height="36"
+                         Background="{StaticResource CardBrush}"
+                         Foreground="{StaticResource TextLight}"
+                         FontSize="16"
+                         Padding="8"
+                         Text="Введите команду..."/>
+                <Button x:Name="SendTextButton"
+                        Content="Отправить"
+                        Margin="8,0,0,0"
+                        Style="{StaticResource FlatButton}"
+                        Click="SendTextButton_Click"/>
+            </StackPanel>
+
+            <!-- Content and mic -->
+            <Grid Grid.Row="2">
+                <Border Background="{StaticResource CardBrush}"
+                        CornerRadius="8"
+                        Padding="16"
+                        Margin="30,50,0,300"
+                        HorizontalAlignment="Left"
+                        MaxWidth="400" Width="400">
+                    <TextBlock x:Name="TranscribedTextBlock"
+                               Text="здесь будет ваша команда"
+                               Foreground="{StaticResource TextLight}"
+                               FontSize="18"
+                               TextWrapping="Wrap" HorizontalAlignment="Left" Width="328" VerticalAlignment="Center"/>
+                </Border>
+
+                <Button x:Name="MicButton"
+                        Width="100" Height="100"
+                        Style="{StaticResource IconButton}"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
+                        Click="MicButton_Click" Margin="0,220,0,0">
+                    <Path Data="M12 14a3.99 3.99 0 0 0 3.99-3.99V5a3.99 3.99 0 1 0-7.98 0v5.01A3.99 3.99 0 0 0 12 14zm6-3.99a1 1 0 0 0-2 0 1 1 0 0 0 2 0zm-6 8a6 6 0 0 0 5.92-5h-1.06a5 5 0 0 1-9.72 0H6.08a6 6 0 0 0 5.92 5z"
+                          Fill="{StaticResource AccentBrush}"
+                          Stretch="Uniform"
+                          Width="36" Height="36"/>
+                </Button>
+
+                <!-- Settings overlay -->
+                <Grid x:Name="SettingsOverlay"
+                      Background="#1A1A24"
+                      Visibility="Collapsed"
+                      Opacity="0"
+                      RenderTransformOrigin="0.5,0">
+                    <Grid.RenderTransform>
+                        <TranslateTransform Y="-20"/>
+                    </Grid.RenderTransform>
+                    <Border CornerRadius="8"
+                            Background="#22222C"
+                            Padding="16"
+                            Margin="64">
+                        <StackPanel>
+                            <TextBlock Text="Настройки"
+                                       Foreground="{StaticResource TextLight}"
+                                       FontSize="20"
+                                       FontWeight="Bold"
+                                       Margin="0,0,0,12"/>
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
+                                <TextBlock Text="Модель ASR:"
+                                           Foreground="{StaticResource TextLight}"
+                                           VerticalAlignment="Center"
+                                           FontSize="16"/>
+                                <ComboBox Width="200"
+                                          Margin="8,0,0,0"
+                                          FontFamily="Consolas"
+                                          FontSize="16">
+                                    <ComboBoxItem Content="Whisper-Tiny"/>
+                                    <ComboBoxItem Content="Vosk"/>
+                                </ComboBox>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
+                                <TextBlock Text="Чувствительность:"
+                                           Foreground="{StaticResource TextLight}"
+                                           VerticalAlignment="Center"
+                                           FontSize="16"/>
+                                <Slider Width="200"
+                                        Minimum="0"
+                                        Maximum="1"
+                                        Value="0.5"
+                                        Margin="8,0,0,0"/>
+                            </StackPanel>
+                            <Button Content="Закрыть"
+                                    Style="{StaticResource FlatButton}"
+                                    HorizontalAlignment="Right"
+                                    Click="SettingsButton_Click"/>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
